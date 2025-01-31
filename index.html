@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Password Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pokémon Password Generator</h1>
+      <p>Generate a secure password using one of the original 151 Pokémon!</p>
+
+      <div class="options">
+        <label class="label">
+          <input type="checkbox" id="include-special" checked /> Include Special
+          Characters
+        </label>
+      </div>
+
+      <button onclick="generatePassword()">Generate Password</button>
+      <div id="password-output"></div>
+    </div>
+  </body>
+</html>
