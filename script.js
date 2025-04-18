@@ -1,4 +1,3 @@
-// Original 151 Pokémon names and their numbers
 const pokemonList = [
   { name: 'Bulbasaur', number: 1 },
   { name: 'Ivysaur', number: 2 },
@@ -178,19 +177,17 @@ function generatePassword() {
   const passwordLength = parseInt();
   //document.getElementById('password-length').value
 
-  // Insert characters from the Pokémon name mixed with optional special characters and random cases
+  // characters from the Pokémon name mixed with optional special characters and random cases
   for (let char of pokemonName) {
     passwordParts.push(getRandomCaseCharacter(char));
     if (includeSpecial && Math.random() < 0.3) {
-      // 30% chance to add a special character
       passwordParts.push(getRandomSpecialCharacter());
     }
   }
 
-  // Always include the Pokémon number
   passwordParts.push(pokemonNumber);
 
-  // Add some random numbers for extra security
+  //random numbers for extra security
   while (passwordParts.length < passwordLength) {
     passwordParts.push(Math.floor(Math.random() * 10));
     if (includeSpecial && passwordParts.length < passwordLength) {
@@ -198,12 +195,7 @@ function generatePassword() {
     }
   }
 
-  // Shuffle the array to mix characters
-  //passwordParts = passwordParts
-  //.sort(() => Math.random() - 0.5)
-  //.slice(0, passwordLength);
-
-  // Create final password string
+  //final password string
   const password = passwordParts.join('');
 
   document.getElementById('password-output').textContent = password;
